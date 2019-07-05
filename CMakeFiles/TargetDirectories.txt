@@ -1,0 +1,3 @@
+/Users/michaelbyrne/Github/nemorino/CMakeFiles/rebuild_cache.dir
+/Users/michaelbyrne/Github/nemorino/CMakeFiles/edit_cache.dir
+/Users/michaelbyrne/Github/nemorino/CMakeFiles/nemorino.dir

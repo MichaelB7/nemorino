@@ -22,4 +22,4 @@ bmi2: $(FILES)
 	g++ $(FLAGS_BMI2) $(FILES) -o $(EXE)
 
 ccc: $(FILES)
-	gcc++ $(FLAGS_CCC) $(FILES) -o $(EXE)
+	g++ $(FLAGS_CCC) $(FILES) -o $(EXE)
