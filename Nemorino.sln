@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Nemorino", "Nelson\Nelson.vcxproj", "{B23D2DB6-4387-478B-A153-4C34596B8C7E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6CB46E9E-786B-4AB2-9E0A-4EAC39D8038E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		PGO|Any CPU = PGO|Any CPU
+		PGO|Win32 = PGO|Win32
+		PGO|x64 = PGO|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		ReleaseNoPopcount|Any CPU = ReleaseNoPopcount|Any CPU
+		ReleaseNoPopcount|Win32 = ReleaseNoPopcount|Win32
+		ReleaseNoPopcount|x64 = ReleaseNoPopcount|x64
+		ReleasePEXT|Any CPU = ReleasePEXT|Any CPU
+		ReleasePEXT|Win32 = ReleasePEXT|Win32
+		ReleasePEXT|x64 = ReleasePEXT|x64
+		ReleaseW32|Any CPU = ReleaseW32|Any CPU
+		ReleaseW32|Win32 = ReleaseW32|Win32
+		ReleaseW32|x64 = ReleaseW32|x64
+		Tune|Any CPU = Tune|Any CPU
+		Tune|Win32 = Tune|Win32
+		Tune|x64 = Tune|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Debug|Win32.Build.0 = Debug|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Debug|x64.ActiveCfg = Debug|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Debug|x64.Build.0 = Debug|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.PGO|Any CPU.ActiveCfg = PGO|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.PGO|Win32.ActiveCfg = PGO|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.PGO|Win32.Build.0 = PGO|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.PGO|x64.ActiveCfg = PGO|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.PGO|x64.Build.0 = PGO|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Release|Win32.ActiveCfg = Release|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Release|Win32.Build.0 = Release|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Release|x64.ActiveCfg = Release|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Release|x64.Build.0 = Release|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseNoPopcount|Any CPU.ActiveCfg = ReleaseNoPopcount|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseNoPopcount|Win32.ActiveCfg = ReleaseNoPopcount|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseNoPopcount|Win32.Build.0 = ReleaseNoPopcount|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseNoPopcount|x64.ActiveCfg = ReleaseNoPopcount|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseNoPopcount|x64.Build.0 = ReleaseNoPopcount|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleasePEXT|Any CPU.ActiveCfg = ReleasePEXT|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleasePEXT|Win32.ActiveCfg = ReleasePEXT|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleasePEXT|Win32.Build.0 = ReleasePEXT|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleasePEXT|x64.ActiveCfg = ReleasePEXT|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleasePEXT|x64.Build.0 = ReleasePEXT|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseW32|Any CPU.ActiveCfg = ReleaseW32|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseW32|Win32.ActiveCfg = ReleaseW32|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseW32|Win32.Build.0 = ReleaseW32|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseW32|x64.ActiveCfg = ReleaseW32|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.ReleaseW32|x64.Build.0 = ReleaseW32|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Tune|Any CPU.ActiveCfg = Tune|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Tune|Win32.ActiveCfg = Tune|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Tune|Win32.Build.0 = Tune|Win32
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Tune|x64.ActiveCfg = Tune|x64
+		{B23D2DB6-4387-478B-A153-4C34596B8C7E}.Tune|x64.Build.0 = Tune|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8577AFC8-4F69-4CB1-A587-DEBB320A4E7D}
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

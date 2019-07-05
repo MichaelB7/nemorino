@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>README</h1>
+<p>Nemorino is a UCI chess engine.</p>
+<h3>Features</h3>
+<ul>
+<li>Syzygy Tablebase support</li>
+<li>Pondering</li>
+<li>Standard Chess and Chess960</li>
+<li>Multi Core support (Shared Hash Table)</li>
+<li>Multi PV analysis mode</li>
+<li>CECP support (experimental - all testing is done using UCI)</li>
+</ul>
+<h5>UCI parameters:</h5>
+<ul>
+<li><b>UCI_Chess960:</b>     If set to true engine will play according to Chess960 rules (default false)</li>
+<li><b>Hash:</b>             Size in MBytes used for the transposition table (default is 32. Nemorino will use additional memory for other fixed-size hash tables)</li>
+<li><b>Clear Hash:</b>       Will clear the transposition table</li>
+<li><b>MultiPV:</b>          Number of principal variations shown (default 1)</li>
+<li><b>Threads:</b>          Maximum number of threads (cores) used</li>
+<li><b>Ponder:</b>           When set to true, engine will continue analysis while waiting for opponent's move (default false)</li>
+<li><b>Contempt:</b>         Score (in centipawns) for accepting draws. If Contempt &gt; 0 then the engine will avoid draws (default 0)</li>
+<li><b>BookFile:</b>         Polyglot book file the engine shall use (default "book.bin"). Nemorino doesn't have an own book so far</li>
+<li><b>OwnBook:</b>          Use Polyglot book, specified by book file (default false)</li>
+<li><b>SyzygyPath:</b>       Path(es) to directories Syzygy tablebase files can be found. Seperate multiple directories by ';' on windows and by ':' on linux</li>
+<li><b>SyzygyProbeDepth:</b> Minimum search depth for probing Syzygy Bases. The lower the number, more tablebase lookups will be done, but search speed will decrease (default 8)</li>
+<li><b>MoveOverhead:</b>     Safety Time(in ms) needed to avoid time-losses (default 100) </li>
+<li><b>UCI_Opponent:</b>     With this command the GUI can send the name, title, elo and if the engine is playing a human or computer to the engine (see <a href="http://wbec-ridderkerk.nl/html/UCIProtocol.html">UCI Specification</a>)</li>
+</ul>
+<h3>Installation</h3>
+Nemorino doesn't bring it's own UI. So for running it, you need a GUI supporting UCI (like <a href="http://www.playwitharena.com/">Arena</a>).<br>
+The engine requires 64-bit Windows.</p>
+There are 2 executables:
+<ul>
+<li><b>Nemorino_5.00_win64.exe</b> is the default and should work on most PCs</li>
+<li><b>Nemorino_5.00_win64-no-popcount.exe</b> should only be used on older PCs with CPUs without POPCNT instruction</li>
+</ul>
+<h3>Internals</h3>
+<ul>
+<li>Bitboard based (using magic bitboards for sliding move generation)</li>
+<li>Principal Variation Search (with Aspiration Windows, Null-Move Pruning, Killermoves, Futility Pruning, Razoring, ...)</li>
+<li>Tapered Eval based on Material, Mobility, Threats, King Safety, and Pawn Structure</li>
+<li>Special evaluation functions for some endgames</li>
+<li>Copy/Make</li>
+</ul>
+<h3>Version History</h3>
+<ul>
+    <li>
+        <b>1.01:</b>
+        <ul>
+            <li>Bugfix: rare crashes caused by hash collisions in transposition table</li>
+            <li>Code changes for non-popcount compiles</li>
+        </ul>
+    </li>
+    <li>
+        <b>1.02:</b>
+        <ul>
+            <li>New Parameters: SyzygyProbeDepth and MoveOverhead</li>
+            <li>Bugfix: Handling of EP-Squares in TB probing code</li>
+        </ul>
+    </li>
+    <li>
+        <b>2.00:</b>
+        <ul>
+            <li>Several Improvements in Search: Singular Extensions, Cut Node Extensions, improved IID,..</li>
+            <li>Improved SEE (consider promotions and pinned pieces)</li>
+            <li>Improved King Safety Evaluation</li>
+            <li>Scale down endgame values if there are opposite colored bishops</li>
+            <li>Several minor improvements and clean-ups</li>
+        </ul>
+    </li>
+    <li>
+        <b>2.00a (only bugfixes relevant when running with more than one thread):</b>
+        <ul>
+            <li>Fix for known issue with tablebase access (see <a href="https://github.com/basil00/Fathom/issues/15">https://github.com/basil00/Fathom/issues/15</a>)</li>
+            <li>Fix for other (rare) crashes</li>
+        </ul>
+    </li>
+    <li>
+        <b>3.00:</b>
+        <ul>
+            <li>Refactoring of SMP implementation => Improved stability</li>
+            <li>Several minor improvements in search and move ordering</li>
+        </ul>
+    </li>
+    <li>
+        <b>4.00:</b>
+        <ul>
+            <li>Improved King Safety evaluation</li>
+            <li>Some Improvements when running with many threads</li>
+            <li>Some Evaluation Improvements (added some material imbalance terms, knight center mobility, ... and removed some useless terms)</li>
+        </ul>
+    </li>
+	<li>
+        <b>5.00:</b>
+        <ul>
+            <li>Several minor Improvements especially for King Safety </li>
+            <li>Several Bugfixes</li>
+            <li>Replaced Syzygy probing code. Now instead of Fathom library, probing code from Stockfish is used</li>
+        </ul>
+    </li>
+</ul>
+<h3>License</h3>
+<p><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU GENERAL PUBLIC LICENSE Version 3</a></p>
+<h3>Remarks</h3>
+<p>I wrote this engine because I wanted to understand, how a chess engine is working. And the best way to learn is to write an engine from scratch by yourself. I first started with C#, but after some time I got the ambition to learn C++.
+Therefore don't expect a lot of new ideas within my code, and neither expect clean and well-structured code. Instead you will find a unique combination of all those ideas explained in the <a href="https://chessprogramming.wikispaces.com">Chess Programming Wiki</a>.</p>
+<h3>Acknowledgements</h3>
+<p>These are my sources of information I used for my engine:</p>
+<ul>
+<li>My main source of information: <a href="https://chessprogramming.wikispaces.com">Chess Programming Wiki</a></li>
+<li><a href="http://talkchess.com/forum/index.php">Computer Chess Club Forums</a></li>
+<li>The code of several Open Source Chess Engines, mainly:<ul>
+<li><a href="http://stockfishchess.org/">Stockfish</a> - I copied board and move representation and some lines of code from Stockfish (marked by source code comments)</li>
+<li><a href="https://github.com/mAarnos/Hakkapeliitta">Hakkapeliitta</a> </li>
+<li><a href="http://op12no2.me/toys/lozza/">Lozza</a></li>
+<li><a href="http://www.chessprogramming.net/senpai/">Senpai</a></li>
+</ul>
+</li>
+<li>The blogs of <a href="http://www.chessprogramming.net/">Steve Maughan</a>, <a href="http://macechess.blogspot.de/">Thomas Petzke</a> and <a href="http://mediocrechess.blogspot.de/">Jonatan Pettersson</a>
+</body>
+</html>
