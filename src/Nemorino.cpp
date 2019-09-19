@@ -22,6 +22,7 @@ int main(int argc, const char* argv[]) {
 		return 0;
 	}
 #endif // !1
+	std::cout << "Compiled for Picochess by Scally" << std::endl;
 	if (argc > 1 && argv[1]) {
 		std::string arg1(argv[1]);
 		if (!arg1.compare("bench4")) {
